@@ -14,8 +14,7 @@ async function starterAsk(prop, arg, dot) {
   const choices = Object.keys(starterTemplates)
   const paths = dot.get(prop, "glob")
   const templates = paths.map(path => basename(path))
-
-  return await ask([
+  const answers = await ask([
     {
       choices,
       message: "What kind of project is this?",
@@ -37,4 +36,6 @@ async function starterAsk(prop, arg, dot) {
       type: "checkbox",
     },
   ])
+
+  return answers.starters
 }

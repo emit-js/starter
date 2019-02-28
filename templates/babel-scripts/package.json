@@ -1,0 +1,8 @@
+{
+  "main": "projectNameDist.js",
+  "scripts": {
+    "build": "babel projectName.js --out-file projectNameDist.js --source-maps",
+    "prepublishOnly": "npm run build",
+    "watch": "babel projectName.js --watch --out-file projectNameDist.js --source-maps"
+  }
+}
