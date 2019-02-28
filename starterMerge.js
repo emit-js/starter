@@ -12,7 +12,7 @@ import {
 import { extname, join } from "path"
 
 // Constants
-const templatesPath = join(__dirname, "templates")
+const templatesPath = join(__dirname, "../templates")
 
 // Helpers
 module.exports = function(dot) {

@@ -15,7 +15,7 @@ module.exports = function(dot, opts) {
 
 async function starter(prop, arg, dot) {
   const { cwd, starters } = arg
-  const templatesPath = join(__dirname, "templates")
+  const templatesPath = join(__dirname, "../templates")
 
   await dot.glob(prop, {
     pattern: templatesPath + "/*",

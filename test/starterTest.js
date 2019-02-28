@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import starter from "./"
+import starter from "../"
 
 // Variables
 let dot

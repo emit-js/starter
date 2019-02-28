@@ -2,7 +2,7 @@
   "name": "@dot-event/starter",
   "version": "2.0.0",
   "description": "dot-event project starter",
-  "main": "starter.js",
+  "main": "./dist/starter.js",
   "keywords": [
     "dot-event",
     "project",
@@ -51,11 +51,6 @@
     "prettier": "1.16.4"
   },
   "operations": {
-    "starter": {},
-    "git": {},
-    "link": {},
-    "spawn": {},
-    "version": {},
     "watchman": {
       "triggers": [
         {
@@ -64,7 +59,7 @@
             "anyof",
             [
               "match",
-              "lib/**/*.js",
+              "*.js",
               "wholename"
             ]
           ],

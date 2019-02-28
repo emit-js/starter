@@ -1,2 +1,3 @@
-fixture
+dist
 node_modules
+test/fixture
