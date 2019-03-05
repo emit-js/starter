@@ -2,6 +2,6 @@
 
 import projectName from "../"
 
-test("export something", () => {
+test("projectName", () => {
   expect(projectName).not.toBeUndefined()
 })
