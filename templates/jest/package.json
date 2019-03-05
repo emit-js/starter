@@ -4,7 +4,7 @@
   },
   "jest": {
     "testMatch": [
-      "<rootDir>/**/*Test.js"
+      "<rootDir>/test/**/*Test.js"
     ]
   }
 }

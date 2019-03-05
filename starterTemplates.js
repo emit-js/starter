@@ -13,13 +13,14 @@ module.exports = {
     "jest-scripts",
     "watchman-babel",
   ],
-  "Browser Babel package": [
+  "Babel with JSX package": [
     "basics",
     "babel",
     "babel-scripts",
     "babel-web",
     "eslint",
     "eslint-es6",
+    "eslint-jsx",
     "husky",
     "jest",
     "jest-babel",
