@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import projectName from "../dist"
+import projectName from "../"
 
 test("export something", () => {
   expect(projectName).not.toBeUndefined()

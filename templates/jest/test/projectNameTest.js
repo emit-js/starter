@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-var projectName = require("../dist")
+var projectName = require("../")
 
 test("projectName", function() {
   expect(projectName).not.toBeUndefined()
