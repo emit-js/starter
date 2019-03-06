@@ -1,11 +1,13 @@
 import { basename, join } from "path"
 
-module.exports = function(dot, opts) {
-  if (dot.state.starter) {
+module.exports = function(dot) {
+  if (dot.starter) {
     return
   }
 
-  dot.state.starter = opts || {}
+  dot("dependencies", "starter", {
+    arg: ["@dot-event/glob", "@dot-event/store"],
+  })
 
   require("./starterAsk")(dot)
   require("./starterMerge")(dot)
