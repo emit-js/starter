@@ -1,4 +1,5 @@
 {
+  "main": "dist/projectName.js",
   "dependencies": {
     "@babel/runtime": "7.3.4"
   },
