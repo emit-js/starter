@@ -1,6 +1,6 @@
 {
   "name": "@dot-event/starter",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "dot-event project starter",
   "main": "./dist/starter.js",
   "keywords": [
@@ -37,7 +37,7 @@
     "@babel/plugin-proposal-object-rest-spread": "7.3.4",
     "@babel/plugin-transform-runtime": "7.3.4",
     "@dot-event/glob": "0.0.4",
-    "@dot-event/log": "1.0.23",
+    "@dot-event/log": "1.0.24",
     "@dot-event/store": "7.0.15",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
