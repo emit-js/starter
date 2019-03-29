@@ -9,6 +9,13 @@ module.exports = function(dot) {
     arg: ["@dot-event/glob", "@dot-event/store"],
   })
 
+  dot("args", "starter", {
+    paths: {
+      alias: ["_", "p", "path"],
+      default: [],
+    },
+  })
+
   require("./starterAsk")(dot)
   require("./starterMerge")(dot)
 
@@ -16,7 +23,7 @@ module.exports = function(dot) {
 }
 
 async function starter(prop, arg, dot) {
-  const { cwd, starters } = arg
+  const { starters } = arg
   const templatesPath = join(__dirname, "../templates")
 
   await dot.glob(prop, {
@@ -24,11 +31,20 @@ async function starter(prop, arg, dot) {
     save: true,
   })
 
-  const name = basename(cwd)
-
-  await dot.starterMerge(prop, {
-    dirPath: cwd,
-    name,
-    starters: starters || (await dot.starterAsk(prop)),
+  const paths = await dot.glob(prop, {
+    absolute: true,
+    pattern: arg.paths,
   })
+
+  return Promise.all(
+    paths.map(
+      async path =>
+        await dot.starterMerge(prop, {
+          dirPath: path,
+          name: basename(path),
+          starters:
+            starters || (await dot.starterAsk(prop)),
+        })
+    )
+  )
 }

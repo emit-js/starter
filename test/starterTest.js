@@ -8,6 +8,7 @@ let dot
 // Tests
 beforeEach(async () => {
   dot = require("dot-event")()
+  require("@dot-event/args")(dot)
   require("@dot-event/log")(dot)
   require("@dot-event/glob")(dot)
   require("@dot-event/store")(dot)
@@ -16,7 +17,7 @@ beforeEach(async () => {
 
 test("starts a new project", async () => {
   await dot.starter({
-    cwd: __dirname + "/fixture",
+    path: __dirname + "/fixture",
     starters: ["basics"],
   })
 })
