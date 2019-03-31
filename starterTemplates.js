@@ -12,7 +12,6 @@ module.exports = {
     "jest-babel",
     "jest-browser",
     "jest-scripts",
-    "watchman-babel",
   ],
   "Babel package": [
     "basics",
@@ -26,7 +25,6 @@ module.exports = {
     "jest-babel",
     "jest-node",
     "jest-scripts",
-    "watchman-babel",
   ],
   "ES6 package": [
     "basics",
@@ -35,6 +33,5 @@ module.exports = {
     "jest",
     "jest-node",
     "jest-scripts",
-    "watchman-babel",
   ],
 }

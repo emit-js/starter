@@ -51,28 +51,6 @@
     "lint-staged": "8.1.5",
     "prettier": "1.16.4"
   },
-  "operations": {
-    "watchman": {
-      "triggers": [
-        {
-          "name": "babel",
-          "expression": [
-            "anyof",
-            [
-              "match",
-              "*.js",
-              "wholename"
-            ]
-          ],
-          "command": [
-            "npm",
-            "run",
-            "build"
-          ]
-        }
-      ]
-    }
-  },
   "babel": {
     "presets": [
       [
