@@ -1,6 +1,6 @@
 {
   "name": "@emit-js/starter",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "description": "emit project starter",
   "main": "./dist/starter.js",
   "keywords": [
