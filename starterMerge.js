@@ -15,18 +15,18 @@ import { extname, join } from "path"
 const templatesPath = join(__dirname, "../templates")
 
 // Helpers
-module.exports = function(dot) {
-  dot.any("starterMerge", starterMerge)
+module.exports = function(emit) {
+  emit.any("starterMerge", starterMerge)
 }
 
-async function starterMerge(prop, arg, dot) {
+async function starterMerge(arg, prop, emit) {
   const { dirPath, name } = arg
 
   if (!arg.starters) {
     return
   }
 
-  const starterBuild = await buildStarters(prop, arg, dot)
+  const starterBuild = await buildStarters(arg, prop, emit)
 
   for (const starter of arg.starters) {
     for (const starterPath in starterBuild[starter]) {
@@ -72,9 +72,9 @@ async function starterMerge(prop, arg, dot) {
   }
 }
 
-async function buildStarters(prop, arg, dot) {
-  const paths = await dot.glob(prop, {
-    dot: true,
+async function buildStarters(arg, prop, emit) {
+  const paths = await emit.glob(prop, {
+    emit: true,
     nodir: true,
     pattern: templatesPath + "/**/*",
   })

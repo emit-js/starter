@@ -3,20 +3,20 @@
 import starter from "../"
 
 // Variables
-let dot
+let emit
 
 // Tests
 beforeEach(async () => {
-  dot = require("dot-event")()
-  require("@dot-event/args")(dot)
-  require("@dot-event/log")(dot)
-  require("@dot-event/glob")(dot)
-  require("@dot-event/store")(dot)
-  starter(dot)
+  emit = require("@emit-js/emit")()
+  require("@emit-js/args")(emit)
+  require("@emit-js/log")(emit)
+  require("@emit-js/glob")(emit)
+  require("@emit-js/store")(emit)
+  starter(emit)
 })
 
 test("starts a new project", async () => {
-  await dot.starter({
+  await emit.starter({
     path: __dirname + "/fixture",
     starters: ["basics"],
   })

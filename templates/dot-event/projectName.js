@@ -1,9 +1,9 @@
-module.exports = function(dot) {
-  if (dot.projectName) {
+module.exports = function(emit) {
+  if (emit.projectName) {
     return
   }
 
-  dot.any("projectName", projectName)
+  emit.any("projectName", projectName)
 }
 
-function projectName(/* prop, arg, dot, event, signal */) {}
+function projectName(/* arg, prop, emit, signal */) {}

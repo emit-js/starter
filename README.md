@@ -1,20 +1,20 @@
-# @dot-event/starter
+# @emit-js/starter
 
-[dot-event](https://github.com/dot-event/dot-event#readme) project starter
+[emit](https://github.com/emit-js/emit#readme) project starter
 
 ![starter](starter.gif)
 
 ## Install
 
 ```bash
-npm install dot-event @dot-event/glob @dot-event/starter @dot-event/store
+npm install @emit-js/emit @emit-js/glob @emit-js/starter @emit-js/store
 ```
 
 ## Setup
 
 ```js
-const dot = require("dot-event")()
-require("@dot-event/glob")(dot)
-require("@dot-event/starter")(dot)
-require("@dot-event/store")(dot)
+const emit = require("@emit-js/emit")()
+require("@emit-js/glob")(emit)
+require("@emit-js/starter")(emit)
+require("@emit-js/store")(emit)
 ```

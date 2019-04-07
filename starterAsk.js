@@ -5,14 +5,14 @@ import { basename } from "path"
 // Helpers
 import starterTemplates from "./starterTemplates"
 
-module.exports = function(dot) {
-  dot.any("starterAsk", starterAsk)
+module.exports = function(emit) {
+  emit.any("starterAsk", starterAsk)
 }
 
-async function starterAsk(prop, arg, dot) {
+async function starterAsk(arg, prop, emit) {
   const ask = createPromptModule()
   const choices = Object.keys(starterTemplates)
-  const paths = dot.get(prop, "glob")
+  const paths = emit.get(prop, "glob")
   const templates = paths.map(path => basename(path))
   const answers = await ask([
     {

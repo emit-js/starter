@@ -1,37 +1,38 @@
 import { basename, join } from "path"
 
-module.exports = function(dot) {
-  if (dot.starter) {
+module.exports = function(emit) {
+  if (emit.starter) {
     return
   }
 
-  dot("dependencies", "starter", {
-    arg: ["@dot-event/glob", "@dot-event/store"],
-  })
+  emit("dependencies", "starter", [
+    "@emit-js/glob",
+    "@emit-js/store",
+  ])
 
-  dot("args", "starter", {
+  emit("args", "starter", {
     paths: {
       alias: ["_", "p", "path"],
       default: [],
     },
   })
 
-  require("./starterAsk")(dot)
-  require("./starterMerge")(dot)
+  require("./starterAsk")(emit)
+  require("./starterMerge")(emit)
 
-  dot.any("starter", starter)
+  emit.any("starter", starter)
 }
 
-async function starter(prop, arg, dot) {
+async function starter(arg, prop, emit) {
   const { starters } = arg
   const templatesPath = join(__dirname, "../templates")
 
-  await dot.glob(prop, {
+  await emit.glob(prop, {
     pattern: templatesPath + "/*",
     save: true,
   })
 
-  const paths = await dot.glob(prop, {
+  const paths = await emit.glob(prop, {
     absolute: true,
     pattern: arg.paths,
   })
@@ -39,11 +40,11 @@ async function starter(prop, arg, dot) {
   return Promise.all(
     paths.map(
       async path =>
-        await dot.starterMerge(prop, {
+        await emit.starterMerge(prop, {
           dirPath: path,
           name: basename(path),
           starters:
-            starters || (await dot.starterAsk(prop)),
+            starters || (await emit.starterAsk(prop)),
         })
     )
   )
