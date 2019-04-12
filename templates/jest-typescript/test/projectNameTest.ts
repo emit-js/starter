@@ -1,5 +1,3 @@
-/* eslint-env jest */
-
 import { projectName } from "../"
 
 test("projectName", (): void => {
