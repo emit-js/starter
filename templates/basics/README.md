@@ -1,6 +1,6 @@
 # project-name
 
-![projectName](projectName.gif)
+![projectName](media/projectName.gif)
 
 ## Install
 

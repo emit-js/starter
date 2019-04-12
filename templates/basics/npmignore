@@ -1,2 +1,6 @@
-*.gif
+.*
+jest.config.js
+tsconfig.json
+docs
+media
 test

@@ -6,7 +6,7 @@
     ""
   ],
   "author": " <>",
-  "main": "projectName.js",
+  "main": "src/projectName.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com//project-name.git"

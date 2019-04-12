@@ -107,6 +107,7 @@ function camelcase(str) {
 
 function convertTargetPath(targetPath) {
   return targetPath
+    .replace(/\/eslintrc\.js$/, "/.eslintrc.js")
     .replace(/\/gitignore$/, "/.gitignore")
     .replace(/\/npmignore$/, "/.npmignore")
 }

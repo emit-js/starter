@@ -34,4 +34,14 @@ module.exports = {
     "jest-node",
     "jest-scripts",
   ],
+  "Typescript package": [
+    "basics",
+    "eslint",
+    "eslint-typescript",
+    "husky",
+    "jest",
+    "jest-typescript",
+    "jest-scripts",
+    "typescript",
+  ],
 }

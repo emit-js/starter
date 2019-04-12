@@ -1,0 +1,11 @@
+{
+  "main": "dist/projectName.js",
+  "scripts": {
+    "build": "tsc",
+    "docs": "typedoc --out docs --media media src"
+  },
+  "devDependencies": {
+    "@types/node": "11.13.4",
+    "typescript": "3.4.3"
+  }
+}

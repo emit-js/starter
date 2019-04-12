@@ -5,74 +5,10 @@
     "pretty": "prettier --write **/*.css **/*.json **/*.md"
   },
   "devDependencies": {
-    "eslint": "5.15.1",
+    "eslint": "5.16.0",
     "eslint-config-prettier": "4.1.0",
     "eslint-plugin-prettier": "3.0.1",
     "prettier": "1.16.4"
-  },
-  "eslintConfig": {
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:prettier/recommended"
-    ],
-    "rules": {
-      "curly": "error",
-      "indent": [
-        "error",
-        2,
-        {
-          "SwitchCase": 1
-        }
-      ],
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
-      "max-len": [
-        "error",
-        {
-          "code": 60,
-          "ignoreRegExpLiterals": true,
-          "ignoreStrings": true,
-          "ignoreTemplateLiterals": true
-        }
-      ],
-      "no-console": [
-        "error",
-        {
-          "allow": [
-            "warn",
-            "error"
-          ]
-        }
-      ],
-      "quotes": [
-        "error",
-        "double"
-      ],
-      "semi": [
-        "error",
-        "never"
-      ],
-      "sort-keys": [
-        "error",
-        "asc",
-        {
-          "caseSensitive": true,
-          "natural": false
-        }
-      ],
-      "sort-vars": [
-        "error",
-        {
-          "ignoreCase": true
-        }
-      ],
-      "strict": 0
-    }
   },
   "prettier": {
     "printWidth": 60,

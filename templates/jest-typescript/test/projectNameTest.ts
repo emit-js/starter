@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
-var projectName = require("../")
+import { projectName } from "../"
 
-test("projectName", function() {
+test("projectName", (): void => {
   expect(projectName).not.toBeUndefined()
 })

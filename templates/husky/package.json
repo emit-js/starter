@@ -13,7 +13,7 @@
       "prettier --write",
       "git add"
     ],
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts}": [
       "eslint --ignore-path .gitignore --fix",
       "git add"
     ]
