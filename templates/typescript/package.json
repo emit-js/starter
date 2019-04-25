@@ -2,10 +2,17 @@
   "main": "dist/projectName.js",
   "scripts": {
     "build": "tsc",
-    "docs": "typedoc --out docs --media media src"
+    "docs": "typedoc --out docs --media media --theme markdown src/*.ts"
   },
   "devDependencies": {
     "@types/node": "11.13.4",
+    "typedoc-plugin-markdown": "1.2.0",
+    "typedoc": "0.14.2",
     "typescript": "3.4.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test && npm run docs && git add docs"
+    }
   }
 }
